@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <img src="./bg.jpg" class="bg-main">
+        <h1>Создание заявки</h1>
+    </main>
+    <section>
+        <div class="content">
+        
+                <label>Имя</label><input type="text" id="Name">
+                <label>Класс</label><input type="text" id="Class">
+                <label>Количество</label><input type="text" id="Value">
+        
+            <button id="btn" onclick="NewBase()">Создать</button>
+        </div>
+    </section>
+
+    <div class="Zakaz-panel" id="panel">
+        <h1>Готово!</h1>
+
+        <p id="Nametext">Имя:</p>
+        <p id="Classtext">Класс:</p>
+        <p id="Valuetext">Количество:</p>
+        <p id="Price">Цена:</p>
+    </div>
+    
+</body>
+
+<script>
+    const Name = document.getElementById('Name');
+    const Class = document.getElementById('Class');
+    const ValueValue = document.getElementById('Value');
+
+    const Nametext = document.getElementById('Nametext')
+    const Classtext = document.getElementById('Classtext')
+    const Valuetext = document.getElementById('Valuetext')
+
+    const price = document.getElementById('Price')
+
+    
+
+    
+    const panel = document.getElementById('panel');
+
+    function NewBase() {
+    panel.style.display = 'flex';
+    let PriceValue = ValueValue.value * 3
+
+    Nametext.textContent = 'Имя: ' + Name.value;
+    Classtext.textContent = 'Класс: ' + Class.value;
+    Valuetext.textContent = 'Значение: ' + ValueValue.value;
+    price.textContent = 'Цена: ' + PriceValue + ' рублей';
+    
+    
+}
+</script>
+</html>
